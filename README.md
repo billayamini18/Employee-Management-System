@@ -1,0 +1,1 @@
+A simple employee management system built with Python using functions, lists, and dictionaries. The system allows users to add new staff, view a list of all employees, search for a specific individual, update their records, and remove them from the system. All operations like searching, updating, and deleting are performed by referencing an employee's unique ID.
