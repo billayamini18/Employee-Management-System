@@ -1,16 +1,12 @@
 def update_employee(employees):
-    #Updates an employee, validating input using conditionals.
     print("\n--- Update Employee ---")
-    # checks employees list is empty
     if not employees:
         print("No employees found. The list is empty.")
         return
-    #Input employee Id and validate
     id_input = input("Enter the ID of the employee to update: ")
     if not id_input.isdigit():
         print("Invalid ID format. Please enter a number.")
         return
-    #checks if employee Id is present in list or not
     emp_id = int(id_input)
     employee_to_update = None
     for emp in employees:
@@ -36,16 +32,14 @@ def update_employee(employees):
         while True:
             new_salary_input = input("Enter new Salary: ")
             try:
-                # Try to convert the input to an integer
                 new_salary = int(new_salary_input)
-                # If successful, update the dictionary and exit the loop
                 employee_to_update['salary'] = new_salary
                 break
             except ValueError:
-                # If the conversion fails, print an error and the loop will ask again
                 print("Invalid input. Please enter numbers only.")
     else:
         print("Invalid choice. Returning to main menu.")
         return
     
+
     print(f"Employee details of '{employee_to_update['name']}' updated successfully!")
